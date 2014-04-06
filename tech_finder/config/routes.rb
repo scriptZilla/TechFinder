@@ -1,10 +1,11 @@
 TechFinder::Application.routes.draw do
-  root 'map_pages#home'
-  match '/map', to: 'map_pages#map', via: 'get'
-  match '/list', to: 'map_pages#list', via: 'get'
-  match '/help', to: 'map_pages#help', via: 'get'
-  match '/about', to: 'map_pages#about', via: 'get'
-  match '/contact', to: 'map_pages#contact', via: 'get'
+  get "users/new"
+
+  root 'static_pages#home'
+  match '/signup',  to: 'users#new',            via: 'get'
+  match '/help', to: 'static_pages#help', via: 'get'
+  match '/about', to: 'static_pages#about', via: 'get'
+  match '/contact', to: 'static_pages#contact', via: 'get'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
