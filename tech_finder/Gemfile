@@ -17,6 +17,8 @@ group :test do
   gem 'capybara', '2.1.0'
 end
 
+gem 'bcrypt-ruby', '3.1.2'
+
 # Use leaflet for the maps
 gem 'leaflet-rails'
 gem 'leaflet-markercluster-rails'
