@@ -1,7 +1,6 @@
 <% provide(:title, 'Map') %>
 <h1>Map</h1>
 <div id="map"><script>
-
 var map = L.map('map').setView([39.73, -97.98], 4);
 
 var OpenStreetMap= L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -19,6 +18,5 @@ markers.addLayer(new L.Marker([38.907231, -77.036464]));
 
 
 markers.addTo(map);
-
 </script>
-</div>
+<div>
