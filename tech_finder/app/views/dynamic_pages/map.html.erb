@@ -1,0 +1,24 @@
+<% provide(:title, 'Map') %>
+<h1>Map</h1>
+<div id="map"><script>
+
+var map = L.map('map').setView([39.73, -97.98], 4);
+
+var OpenStreetMap= L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+	attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>', 
+	maxZoom: 18
+});
+
+OpenStreetMap.addTo(map);
+
+var markers = new L.MarkerClusterGroup();
+
+markers.addLayer(new L.Marker([40.014986, -105.270546]).bindPopup("Im a popup!").openPopup());
+
+markers.addLayer(new L.Marker([38.907231, -77.036464]));
+
+
+markers.addTo(map);
+
+</script>
+</div>
