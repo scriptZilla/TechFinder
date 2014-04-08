@@ -1,7 +1,8 @@
 TechFinder::Application.routes.draw do
+  resources :users
+
   get "dynamic_pages/map"
   get "dynamic_pages/list"
-  get "users/new"
 
   root 'static_pages#home'
 
